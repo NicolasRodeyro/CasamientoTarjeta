@@ -46,7 +46,7 @@ window.INVITACION = {
   confirmacion: {
     whatsapp: WHATSAPP_NUMBER,
     // Mensaje que aparece escrito al abrir WhatsApp.
-    mensaje: "¡Hola! Confirmo mi asistencia al aniversario de Silvana y José!",
+    mensaje: "¡Hola! Confirmo mi asistencia al aniversario de Sil y José!",
     // Opcional: fecha límite para confirmar, escrita como se va a leer.
     // Ej: "10 de enero". Si queda vacío, no se muestra.
     fechaLimite: "",
@@ -62,7 +62,8 @@ window.INVITACION = {
     sobreBoton: "Abrir invitación",
 
     heroSubtitulo: "Aniversario de 30 años", // título de la pestaña y del evento en el calendario
-    heroInvitacion: "Te invitamos a nuestro aniversario 30", // texto de la portada
+    heroInvitacion: "Te invitamos a nuestro aniversario", 
+    heroInvitacion: "Te invitamos a nuestro aniversario",// texto de la portada
 
     invitacionTitulo: "Treinta años",
     invitacionTexto:
@@ -74,6 +75,11 @@ window.INVITACION = {
 
 
     ubicacionTitulo: "¿Dónde?",
+
+    dressCodeEtiqueta: "Dress code",
+    dressCodeTitulo: "Vestimenta",
+    dressCodeValor: "Elegante",
+    dressCodeTexto: "Vení con tu mejor look para celebrar con nosotros.",
 
     confirmacionTitulo: "Confirmá tu asistencia",
     confirmacionTexto: "Tu confirmación nos ayuda a preparar todo. Es un solo toque.",

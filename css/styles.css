@@ -553,6 +553,33 @@ svg { display: block; }
   color: var(--dorado-oscuro);
 }
 
+/* ---------- Dress code ---------- */
+
+.dress {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  background: var(--marfil);
+  border: 1px solid var(--dorado-claro);
+  outline: 1px solid rgba(176, 138, 82, .25);
+  outline-offset: 6px;
+}
+.dress__valor {
+  margin: 0;
+  font-size: clamp(26px, 8vw, 34px);
+  font-weight: 600;
+  letter-spacing: .3em;
+  padding-left: .3em; /* compensa el espacio final del letter-spacing */
+  text-transform: uppercase;
+  color: var(--texto);
+}
+.dress__texto {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--texto-suave);
+}
+
 /* ---------- Confirmación ---------- */
 
 .btn-confirmar {

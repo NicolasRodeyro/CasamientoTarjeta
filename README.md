@@ -13,7 +13,7 @@ images/           → todas las imágenes
 audio/            → música de fondo
 ```
 
-Orden de la página: sobre de entrada → portada → invitación → cuenta regresiva → ubicación → confirmación.
+Orden de la página: sobre de entrada → portada → invitación → cuenta regresiva → ubicación → dress code → confirmación.
 
 ## Imágenes que espera el proyecto
 
