@@ -29,7 +29,7 @@ window.INVITACION = {
     // Formato: "AAAA-MM-DDTHH:MM:SS-03:00"  (-03:00 = hora de Argentina)
     fecha: "2027-01-23T21:00:00-03:00",
     zonaHoraria: "America/Argentina/Buenos_Aires",
-    duracionHoras: 6, // se usa para el botón "Agendar"
+    duracionHoras: 7, // de 21:00 a 04:00. Define la hora de fin de la portada y del botón "Agendar"
     tituloAgenda: "Aniversario 30 años · Silvana & José",
   },
 
@@ -40,7 +40,7 @@ window.INVITACION = {
     busquedaMaps: "Salón Principal, San Isidro, Villa Allende, Córdoba, Argentina",
     // Opcional: link exacto de Google Maps (en Maps: Compartir → Copiar vínculo).
     // Si lo completás, tiene prioridad sobre la búsqueda.
-    linkMaps: "",
+    linkMaps: "https://maps.app.goo.gl/rViM1JzM5TJscpRG6",
   },
 
   confirmacion: {
