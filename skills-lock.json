@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "skills": {
+    "booth-invitation-writer": {
+      "source": "LensmorOfficial/trade-show-skills",
+      "sourceType": "github",
+      "skillPath": "booth-invitation-writer/SKILL.md",
+      "computedHash": "027790de8accd8a3cb17356c89bdebf38b5d3fd11c2b0fa8d93d8a97782e8d14"
+    },
+    "landing-page-design": {
+      "source": "101-skills/superpowers",
+      "sourceType": "github",
+      "skillPath": "guides/design/landing-page-design/SKILL.md",
+      "computedHash": "6ba6cfcbdba9840d9519b03b11197bd93cc62912853d7552e7ca5f41f72ba158"
+    }
+  }
+}

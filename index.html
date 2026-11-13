@@ -107,8 +107,6 @@
 
     <!-- ===================== SECCIÓN: PORTADA ===================== -->
     <section class="hero" id="inicio">
-      <div class="hero__bg" style="background-image: url('images/fondo-hero.jpg')" aria-hidden="true"></div>
-
       <div class="hero__card">
         <svg class="esquina esquina--tl" aria-hidden="true"><use href="#orn-esquina" /></svg>
         <svg class="esquina esquina--tr" aria-hidden="true"><use href="#orn-esquina" /></svg>
@@ -137,6 +135,7 @@
           </div>
           <p class="fecha__anio" data-fecha="anio">2027</p>
           <p class="fecha__hora"><span data-fecha="hora">21:00</span> hs</p>
+          <p class="fecha__lugar" data-text="ubicacion.direccion">San Isidro, Villa Allende</p>
 
           <svg class="filigrana filigrana--abajo" aria-hidden="true"><use href="#orn-filigrana" /></svg>
         </div>
@@ -151,7 +150,7 @@
     <section class="section section--marfil" id="invitacion">
       <div class="container">
         <div class="arco reveal">
-          <img src="images/foto-destacada.jpg" alt="Silvana y José" loading="lazy" />
+          <img src="images/foto-6.jpg" alt="Silvana y José en la costa de Positano" style="object-position: 60% 40%" loading="lazy" />
         </div>
 
         <div class="numero-30 reveal" aria-hidden="true">
@@ -186,30 +185,8 @@
       </div>
     </section>
 
-    <!-- ===================== SECCIÓN: GALERÍA ===================== -->
-    <section class="section section--blanco" id="galeria">
-      <div class="container">
-        <h2 class="titulo script reveal" data-text="galeriaTitulo">Nuestros momentos</h2>
-        <p class="eyebrow reveal" data-text="galeriaSubtitulo">Algunos recuerdos de estos 30 años</p>
-        <svg class="divisor reveal" aria-hidden="true"><use href="#orn-divisor" /></svg>
-
-        <div class="carousel reveal" data-carousel aria-roledescription="carrusel" aria-label="Fotos de Silvana y José">
-          <div class="carousel__viewport">
-            <ul class="carousel__track" data-carousel-track></ul>
-          </div>
-          <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Foto anterior" data-carousel-prev>
-            <svg aria-hidden="true"><use href="#ico-flecha" /></svg>
-          </button>
-          <button class="carousel__btn carousel__btn--next" type="button" aria-label="Foto siguiente" data-carousel-next>
-            <svg aria-hidden="true"><use href="#ico-flecha" /></svg>
-          </button>
-          <div class="carousel__dots" data-carousel-dots></div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===================== SECCIÓN: UBICACIÓN ===================== -->
-    <section class="section section--crema" id="ubicacion">
+    <section class="section section--blanco" id="ubicacion">
       <div class="container">
         <p class="eyebrow reveal">Ubicación</p>
         <h2 class="titulo script reveal" data-text="ubicacionTitulo">¿Dónde?</h2>
@@ -231,6 +208,8 @@
       <div class="container">
         <h2 class="titulo script reveal" data-text="confirmacionTitulo">Confirmá tu asistencia</h2>
         <svg class="divisor reveal" aria-hidden="true"><use href="#orn-divisor" /></svg>
+        <p class="texto confirmar__texto reveal" data-text="confirmacionTexto">Tu confirmación nos ayuda a preparar todo. Es un solo toque.</p>
+        <p class="confirmar__limite reveal" data-confirmar-limite hidden></p>
 
         <a class="btn-confirmar reveal" data-whatsapp href="#" target="_blank" rel="noopener">
           <svg aria-hidden="true"><use href="#ico-whatsapp" /></svg>

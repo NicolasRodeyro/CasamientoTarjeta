@@ -2,7 +2,7 @@
    CONFIGURACIÓN DE LA INVITACIÓN
    -------------------------------------------------------------------------
    Todo lo editable está acá: nombres, fecha, ubicación, WhatsApp, música,
-   textos y fotos del carrusel. No hace falta tocar index.html ni main.js.
+   y textos. No hace falta tocar index.html ni main.js.
    (Excepción: los meta tags Open Graph de index.html, ver README.)
    ========================================================================= */
 
@@ -11,7 +11,7 @@
    Sólo números: sin "+", espacios ni guiones.
    En Argentina, para celulares va "549" adelante (54 = país, 9 = celular).
    Ejemplo: (0351) 15 123-4567  →  "5493511234567"                         */
-const WHATSAPP_NUMBER = "549XXXXXXXXXX";
+const WHATSAPP_NUMBER = "5493513645347";
 
 window.INVITACION = {
   pareja: {
@@ -46,7 +46,10 @@ window.INVITACION = {
   confirmacion: {
     whatsapp: WHATSAPP_NUMBER,
     // Mensaje que aparece escrito al abrir WhatsApp.
-    mensaje: "¡Hola! Confirmo mi asistencia al aniversario de Silvana y José 🥂",
+    mensaje: "¡Hola! Confirmo mi asistencia al aniversario de Silvana y José!",
+    // Opcional: fecha límite para confirmar, escrita como se va a leer.
+    // Ej: "10 de enero". Si queda vacío, no se muestra.
+    fechaLimite: "",
   },
 
   musica: {
@@ -68,26 +71,12 @@ window.INVITACION = {
     cuentaTitulo: "Falta muy poco",
     cuentaFinal: "¡Hoy es el gran día!",
 
-    galeriaTitulo: "Nuestros momentos",
-    galeriaSubtitulo: "Algunos recuerdos de estos 30 años",
 
     ubicacionTitulo: "¿Dónde?",
 
     confirmacionTitulo: "Confirmá tu asistencia",
+    confirmacionTexto: "Tu confirmación nos ayuda a preparar todo. Es un solo toque.",
 
     cierre: "Te esperamos para celebrar juntos",
-  },
-
-  // Fotos del carrusel (entre 4 y 6). Se muestran en este orden.
-  fotos: [
-    { src: "images/foto-1.jpg", alt: "Silvana y José" },
-    { src: "images/foto-2.jpg", alt: "Silvana y José" },
-    { src: "images/foto-3.jpg", alt: "Silvana y José" },
-    { src: "images/foto-4.jpg", alt: "Silvana y José" },
-    { src: "images/foto-5.jpg", alt: "Silvana y José" },
-  ],
-
-  carrusel: {
-    intervaloMs: 5000, // avance automático
   },
 };

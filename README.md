@@ -7,13 +7,13 @@ Landing page estática (HTML + CSS + JS, sin frameworks). Se publica tal cual en
 ```
 index.html        → secciones de la página
 css/styles.css    → estilos (paleta y fuentes en :root)
-js/config.js      → ✏️ TODO lo editable: nombres, fecha, ubicación, WhatsApp, música, textos, fotos
+js/config.js      → ✏️ TODO lo editable: nombres, fecha, ubicación, WhatsApp, música, textos
 js/main.js        → lógica (un módulo por sección)
 images/           → todas las imágenes
 audio/            → música de fondo
 ```
 
-Orden de la página: sobre de entrada → portada → invitación → cuenta regresiva → galería → ubicación → confirmación.
+Orden de la página: sobre de entrada → portada → invitación → cuenta regresiva → ubicación → confirmación.
 
 ## Imágenes que espera el proyecto
 
@@ -21,13 +21,11 @@ Reemplazá los archivos de `images/` por las fotos reales **con el mismo nombre*
 
 | Archivo              | Dónde se usa                          | Proporción          | Tamaño sugerido |
 |----------------------|---------------------------------------|---------------------|-----------------|
-| `fondo-hero.jpg`     | Fondo de la portada (queda difuminado) | Vertical 2:3        | 1080 × 1620     |
-| `foto-destacada.jpg` | Foto en marco de arco (invitación)    | Vertical 4:5        | 900 × 1125      |
-| `foto-1.jpg` … `foto-5.jpg` | Carrusel                       | Vertical 4:5        | 900 × 1125      |
+| `foto-6.jpg`         | Foto en marco de arco (invitación)    | Vertical 4:5        | 900 × 1125      |
 | `og-image.jpg`       | Vista previa al compartir por WhatsApp | Horizontal 1.91:1   | 1200 × 630      |
 
 Consejos: que pesen menos de ~300 KB cada una (se puede comprimir en squoosh.app). Las fotos se recortan automáticamente para llenar el marco, así que conviene que la pareja esté centrada.
-Para usar 4 o 6 fotos en el carrusel, editá la lista `fotos` en `js/config.js`.
+Las fotos originales (incluida la `.heic` del iPhone, que los navegadores no muestran) quedaron en `fotos-originales/`, que la página no usa.
 
 ## Música
 

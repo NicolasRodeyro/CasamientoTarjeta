@@ -135,99 +135,6 @@
     ics.download = "aniversario.ics";
   }
 
-  /* ---------- Carrusel: flechas, puntos, swipe y avance automático ---------- */
-  function initCarrusel() {
-    const root = $("[data-carousel]");
-    if (!root) return;
-    const track = $("[data-carousel-track]", root);
-    const viewport = $(".carousel__viewport", root);
-    const dotsBox = $("[data-carousel-dots]", root);
-    const fotos = CONFIG.fotos || [];
-    const total = fotos.length;
-    if (!total) return;
-
-    track.innerHTML = fotos
-      .map((f, i) => `
-        <li class="carousel__slide" role="group" aria-roledescription="foto" aria-label="${i + 1} de ${total}">
-          <img src="${f.src}" alt="${f.alt || ""}" ${i ? 'loading="lazy"' : ""} draggable="false" />
-        </li>`)
-      .join("");
-
-    dotsBox.innerHTML = fotos
-      .map((_, i) => `<button class="carousel__dot" type="button" aria-label="Ir a la foto ${i + 1}"></button>`)
-      .join("");
-    const dots = $$(".carousel__dot", dotsBox);
-
-    let actual = 0;
-    let autoTimer = null;
-    const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    function ir(i) {
-      actual = (i + total) % total;
-      track.style.transform = `translateX(${-actual * 100}%)`;
-      dots.forEach((d, j) => d.setAttribute("aria-current", j === actual ? "true" : "false"));
-    }
-
-    function detenerAuto() { clearInterval(autoTimer); autoTimer = null; }
-    function iniciarAuto() {
-      detenerAuto();
-      if (reducirMovimiento || total < 2) return;
-      autoTimer = setInterval(() => ir(actual + 1), CONFIG.carrusel.intervaloMs);
-    }
-
-    $("[data-carousel-prev]", root).addEventListener("click", () => { ir(actual - 1); iniciarAuto(); });
-    $("[data-carousel-next]", root).addEventListener("click", () => { ir(actual + 1); iniciarAuto(); });
-    dots.forEach((d, i) => d.addEventListener("click", () => { ir(i); iniciarAuto(); }));
-
-    // Swipe (pointer events: sirve para touch y mouse)
-    let inicioX = 0, inicioY = 0, deltaX = 0, arrastrando = false, horizontal = null;
-
-    viewport.addEventListener("pointerdown", (e) => {
-      arrastrando = true; horizontal = null;
-      inicioX = e.clientX; inicioY = e.clientY; deltaX = 0;
-      detenerAuto();
-    });
-    viewport.addEventListener("pointermove", (e) => {
-      if (!arrastrando) return;
-      const dx = e.clientX - inicioX;
-      const dy = e.clientY - inicioY;
-      if (horizontal === null && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
-        horizontal = Math.abs(dx) > Math.abs(dy);
-        if (horizontal) {
-          track.classList.add("is-dragging");
-          viewport.setPointerCapture(e.pointerId);
-        }
-      }
-      if (!horizontal) return;
-      const ancho = track.clientWidth;
-      deltaX = ancho ? Math.max(-ancho, Math.min(ancho, dx)) : dx;
-      track.style.transform = `translateX(calc(${-actual * 100}% + ${deltaX}px))`;
-    });
-    const soltar = () => {
-      if (!arrastrando) return;
-      arrastrando = false;
-      track.classList.remove("is-dragging");
-      const umbral = Math.min(60, track.clientWidth * 0.15);
-      if (horizontal && Math.abs(deltaX) > umbral) ir(actual + (deltaX < 0 ? 1 : -1));
-      else ir(actual);
-      iniciarAuto();
-    };
-    viewport.addEventListener("pointerup", soltar);
-    viewport.addEventListener("pointercancel", soltar);
-
-    // Teclado
-    root.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") { ir(actual - 1); iniciarAuto(); }
-      if (e.key === "ArrowRight") { ir(actual + 1); iniciarAuto(); }
-    });
-
-    // Pausar si la pestaña no está visible
-    document.addEventListener("visibilitychange", () => (document.hidden ? detenerAuto() : iniciarAuto()));
-
-    ir(0);
-    iniciarAuto();
-  }
-
   /* ---------- Aparición suave al hacer scroll ---------- */
   function initReveal() {
     const items = $$(".reveal");
@@ -350,6 +257,12 @@
     const c = CONFIG.confirmacion;
     if (!boton || !c) return;
 
+    const limite = $("[data-confirmar-limite]");
+    if (limite && c.fechaLimite) {
+      limite.textContent = `Te pedimos confirmar antes del ${c.fechaLimite}`;
+      limite.hidden = false;
+    }
+
     const numero = String(c.whatsapp || "").replace(/\D/g, "");
     if (/x/i.test(c.whatsapp || "") || numero.length < 10) {
       // Número sin configurar: el botón no abre un link roto.
@@ -372,7 +285,6 @@
     initSobre,
     initCuentaRegresiva,
     initAgendar,
-    initCarrusel,
     initUbicacion,
     initConfirmacion,
     initReveal,
