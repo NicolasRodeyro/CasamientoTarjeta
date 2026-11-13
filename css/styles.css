@@ -252,9 +252,9 @@ svg { display: block; }
 }
 .fecha__hora {
   margin: 12px 0 0;
-  font-size: 35px;
-  letter-spacing: .18em;
-  padding-left: .18em; /* compensa el espacio final del letter-spacing */
+  font-size: clamp(22px, 6.6vw, 30px);
+  letter-spacing: .12em;
+  padding-left: .12em; /* compensa el espacio final del letter-spacing */
   color: var(--texto-suave);
 }
 
@@ -571,10 +571,11 @@ svg { display: block; }
 }
 .dress__valor {
   margin: 0;
-  font-size: clamp(26px, 8vw, 34px);
+  font-size: clamp(22px, 6.6vw, 30px);
   font-weight: 600;
-  letter-spacing: .3em;
-  padding-left: .3em; /* compensa el espacio final del letter-spacing */
+  line-height: 1.3;
+  letter-spacing: .22em;
+  padding-left: .22em; /* compensa el espacio final del letter-spacing */
   text-transform: uppercase;
   color: var(--texto);
 }
@@ -618,10 +619,11 @@ svg { display: block; }
 .confirmar__texto { margin-bottom: 28px; }
 .confirmar__limite {
   margin: -12px 0 28px;
-  font-size: 14px;
-  letter-spacing: .16em;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--dorado-oscuro);
+  color: #1c1917;
 }
 
 .confirmar__aviso {

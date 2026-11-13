@@ -49,7 +49,7 @@ window.INVITACION = {
     mensaje: "¡Hola! Confirmo mi asistencia al aniversario de Sil y José!",
     // Opcional: fecha límite para confirmar, escrita como se va a leer.
     // Ej: "10 de enero". Si queda vacío, no se muestra.
-    fechaLimite: "",
+    fechaLimite: "6 de enero de 2027",
   },
 
   musica: {
@@ -62,8 +62,7 @@ window.INVITACION = {
     sobreBoton: "Abrir invitación",
 
     heroSubtitulo: "Aniversario de 30 años", // título de la pestaña y del evento en el calendario
-    heroInvitacion: "Te invitamos a nuestro aniversario", // texto de la portada
-    heroAnios: "30 años", // va debajo de heroInvitacion, en grande
+    heroInvitacion: "Te invitamos a nuestro aniversario", 
 
     invitacionTitulo: "Treinta años",
     invitacionTexto:

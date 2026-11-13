@@ -44,13 +44,15 @@
       return;
     }
     const tz = CONFIG.evento.zonaHoraria;
-    const fmt = (opts) => new Intl.DateTimeFormat("es-AR", { timeZone: tz, ...opts }).format(fechaEvento);
+    const fmt = (opts, d = fechaEvento) => new Intl.DateTimeFormat("es-AR", { timeZone: tz, ...opts }).format(d);
+    const fin = new Date(fechaEvento.getTime() + (CONFIG.evento.duracionHoras || 0) * 3600 * 1000);
     const partes = {
       diaSemana: capitalizar(fmt({ weekday: "long" })),
       dia: fmt({ day: "numeric" }),
       mes: capitalizar(fmt({ month: "long" })),
       anio: fmt({ year: "numeric" }),
       hora: fmt({ hour: "2-digit", minute: "2-digit", hour12: false }),
+      horaFin: fmt({ hour: "2-digit", minute: "2-digit", hour12: false }, fin),
     };
     $$("[data-fecha]").forEach((el) => {
       const v = partes[el.dataset.fecha];
