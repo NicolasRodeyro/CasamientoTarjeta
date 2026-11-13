@@ -62,8 +62,8 @@ window.INVITACION = {
     sobreBoton: "Abrir invitación",
 
     heroSubtitulo: "Aniversario de 30 años", // título de la pestaña y del evento en el calendario
-    heroInvitacion: "Te invitamos a nuestro aniversario", 
-    heroInvitacion: "Te invitamos a nuestro aniversario",// texto de la portada
+    heroInvitacion: "Te invitamos a nuestro aniversario", // texto de la portada
+    heroAnios: "30 años", // va debajo de heroInvitacion, en grande
 
     invitacionTitulo: "Treinta años",
     invitacionTexto:

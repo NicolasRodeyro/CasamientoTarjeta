@@ -185,7 +185,7 @@ svg { display: block; }
 }
 
 .hero__sub {
-  margin: 4px 0 26px;
+  margin: 4px 0 0;
   font-size: clamp(19px, 5.4vw, 24px);
   font-weight: 600;
   line-height: 1.35;
@@ -193,6 +193,11 @@ svg { display: block; }
   padding-left: .22em; /* compensa el espacio final del letter-spacing */
   text-transform: uppercase;
   color: #1c1917;
+}
+.hero__anios {
+  margin: 2px 0 22px;
+  padding: 0 .1em .08em; /* evita que se recorten los trazos de la script */
+  font-size: clamp(48px, 14vw, 68px);
 }
 
 .fecha-bloque {
