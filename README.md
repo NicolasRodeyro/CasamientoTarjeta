@@ -22,7 +22,7 @@ Reemplazá los archivos de `images/` por las fotos reales **con el mismo nombre*
 | Archivo              | Dónde se usa                          | Proporción          | Tamaño sugerido |
 |----------------------|---------------------------------------|---------------------|-----------------|
 | `foto-6.jpg`         | Foto en marco de arco (invitación)    | Vertical 4:5        | 900 × 1125      |
-| `og-image.jpg`       | Vista previa al compartir por WhatsApp | Horizontal 1.91:1   | 1200 × 630      |
+| `og-aniversario.jpg` | Vista previa al compartir por WhatsApp | Horizontal 1.91:1   | 1200 × 630      |
 
 Consejos: que pesen menos de ~300 KB cada una (se puede comprimir en squoosh.app). Las fotos se recortan automáticamente para llenar el marco, así que conviene que la pareja esté centrada.
 Las fotos originales (incluida la `.heic` del iPhone, que los navegadores no muestran) quedaron en `fotos-originales/`, que la página no usa.
@@ -58,7 +58,7 @@ Otros datos importantes en `config.js`:
 
 1. Publicar el sitio y copiar la URL final (ej. `https://usuario.github.io/aniversario/`).
 2. En `index.html`, completar `og:url` con esa URL y cambiar `og:image` a la URL completa:
-   `https://usuario.github.io/aniversario/images/og-image.jpg` (WhatsApp necesita la dirección completa).
+   `https://usuario.github.io/aniversario/images/og-aniversario.jpg` (WhatsApp necesita la dirección completa).
 3. Si WhatsApp sigue mostrando una vista previa vieja, agregá `?v=2` al final del link.
 
 ## Agregar secciones nuevas (ubicación, confirmación, etc.)
